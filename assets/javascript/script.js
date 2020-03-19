@@ -18,5 +18,8 @@ function genius() {
   });
 }
 // create a fucntion to get deezer info
+    // function deezer() {
+    //     var 
+    // }
 // create a button click to console log deezer info
 // find out how to use deezer to get artist info
