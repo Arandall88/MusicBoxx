@@ -9,7 +9,7 @@ function genius() {
   var api_url =
       "https://api.genius.com/search?access_token=6stGl_AhiQF-yaqXNIYYERqz147RjWWIxPU01IuBDbpoEpryb_ECXzWhfypCwDLr",
     options = {
-      url: api_url + "&q=Beyonce",
+      url: api_url + "&q=" + searchValue,
       method: "GET"
     };
 
