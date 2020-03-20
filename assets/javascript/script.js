@@ -1,25 +1,47 @@
-// dAeQi-3K7wMf5YkR2OSWP-lvt3SY5JtuF9EKZmH4Ik7brQxXfpMGtY0uWKzEOJe1 Client Id
-// ntTHfcs5w9I3cLfkmUfE98Drvpj9605nlReLjTwX0rJlkisTFURNesPNoRutvbSC-bgj_IF1BFSAOgC4a465Vw client secret
-// In7z5zIvdo5XP5c3P720z22-4x4lIBwbH_Eke9sOion9sWvvv3dcrUFQ6bV5iIFo  access token
-// https://REDIRECT_URI/#access_token=ACCESS_TOKEN&state=STATE
-// Deezer application ID 402084
-// Deezer Secret Key 84869eb24183ff5f22f1c715ee08c5ee
-$("#submit-button").click(genius);
-function genius() {
+// use JS to set input to a variable
+function searchFunction() {
+  input = document.getElementById("myInput");
+  input.value
+}
+
+// grab input value
+// when you click submit that input value should be what is searched
+// ================STRETCH GOAL
+// show input value on HTML PAGE
+$("#get-music").click(function(){
+  var str = $("#myInput").val();
+  bandsintown(str);
+  genius(str);
+  console.log(str);
+});
+
+function genius (getArtist) {
   var api_url =
       "https://api.genius.com/search?access_token=6stGl_AhiQF-yaqXNIYYERqz147RjWWIxPU01IuBDbpoEpryb_ECXzWhfypCwDLr",
     options = {
-      url: api_url + "&q=" + "search",
+      url: api_url + "&q=" + getArtist,
       method: "GET"
+    
     };
 
   $.ajax(options).then(function(response) {
     console.log(response);
-  });
+})
+
+
 }
-// create a fucntion to get deezer info
-    // function deezer() {
-    //     var 
-    // }
-// create a button click to console log deezer info
-// find out how to use deezer to get artist info
+
+function bandsintown (getArtist) {
+
+  var queryURL =
+    "https://rest.bandsintown.com/artists/" + getArtist + "?app_id=codingbootcamp";
+      bandOptions = {
+        url:queryURL,
+        method: "GET"
+      }
+      $.ajax(bandOptions).then(function(response) {
+        console.log(response);
+
+      })
+     
+  }
