@@ -1,3 +1,3 @@
 # MusicBoxx
-App where you can listen to your favorite artist for free while getting cool facts and information about that artist. 
+App where you can learn cool facts about your favorite artist and also find out where they are playing next!. 
 https://arandall88.github.io/MusicBoxx/
