@@ -1,4 +1,5 @@
 // use JS to set input to a variable
+// d1243d59a55aac63620cde2da9cb8533 Bands in town app id 
 function searchFunction() {
   input = document.getElementById("myInput");
   input.value
@@ -8,11 +9,12 @@ function searchFunction() {
 // when you click submit that input value should be what is searched
 // ================STRETCH GOAL
 // show input value on HTML PAGE
-$("#get-music").click(function(){
+$("#artist").click(function(){
   var str = $("#myInput").val();
   bandsintown(str);
-  genius(str);
+  genius();
   console.log(str);
+  console.log("click");
 });
 
 function genius (getArtist) {
@@ -34,7 +36,7 @@ function genius (getArtist) {
 function bandsintown (getArtist) {
 
   var queryURL =
-    "https://rest.bandsintown.com/artists/" + getArtist + "?app_id=codingbootcamp";
+    "https://rest.bandsintown.com/artists/" + getArtist + "?app_id=d1243d59a55aac63620cde2da9cb8533";
       bandOptions = {
         url:queryURL,
         method: "GET"
@@ -43,5 +45,7 @@ function bandsintown (getArtist) {
         console.log(response);
 
       })
-     
+     var artistEl = document.getElementById("artist");
+      console.log(artistEl);
+      
   }
