@@ -43,8 +43,13 @@ function bandsintown (getArtist) {
       }
       $.ajax(bandOptions).then(function(response) {
         console.log(response);
+        // response is an array
+        // I have to loop through array to get info I want
         for ( var i = 0; i < response.length; i++) {
-         console.log(response[i]);
+        // i want venue information from response
+          console.log(response[i].venue.name);
+          console.log(response[i].venue.city);
+          console.log(response[i].venue.country);
         }
 
       })
@@ -52,3 +57,13 @@ function bandsintown (getArtist) {
       console.log(artistEl);
       
   }
+var Angel = {
+  name: "Angel",
+  cohort: "Web Development",
+  grad_date:{
+    month: "May",
+    day: "1",
+    year: "2020"
+  }
+}
+console.log(Angel.grad_date.day);
