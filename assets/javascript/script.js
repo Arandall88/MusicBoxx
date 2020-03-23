@@ -12,7 +12,7 @@ function searchFunction() {
 $("#artist").click(function(){
   var str = $("#myInput").val();
   bandsintown(str);
-  genius();
+  genius(str);
   console.log(str);
   console.log("click");
 });
@@ -36,13 +36,16 @@ function genius (getArtist) {
 function bandsintown (getArtist) {
 
   var queryURL =
-    "https://rest.bandsintown.com/artists/" + getArtist + "?app_id=d1243d59a55aac63620cde2da9cb8533";
+    "https://rest.bandsintown.com/artists/" + getArtist + "/events?app_id=d1243d59a55aac63620cde2da9cb8533";
       bandOptions = {
         url:queryURL,
         method: "GET"
       }
       $.ajax(bandOptions).then(function(response) {
         console.log(response);
+        for ( var i = 0; i < response.length; i++) {
+         console.log(response[i]);
+        }
 
       })
      var artistEl = document.getElementById("artist");
