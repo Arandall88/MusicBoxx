@@ -50,6 +50,10 @@ function bandsintown (getArtist) {
         // I have to loop through array to get info I want
         for ( var i = 0; i < response.length; i++) {
         // i want venue information from response
+        var name = $("<h3>").text(response[i].venue.name)
+        var city = $("<p>").text(response[i].venue.city)
+        var country = $("<p>").text(response[i].venue.country)
+        $("#events").append(name, city, country);
           console.log(response[i].venue.name);
           console.log(response[i].venue.city);
           console.log(response[i].venue.country);
