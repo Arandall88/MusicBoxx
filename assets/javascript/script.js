@@ -4,7 +4,8 @@ function searchFunction() {
   input = document.getElementById("myInput");
   input.value
 }
-
+var eventsHeader = document.getElementById("events-header");
+  eventsHeader.innerHTML = " <strong>Hey!</strong>"
 // grab input value
 // when you click submit that input value should be what is searched
 // ================STRETCH GOAL
@@ -27,6 +28,7 @@ function genius (getArtist) {
     };
 
   $.ajax(options).then(function(response) {
+    console.log("genius");
     console.log(response);
 })
 
@@ -42,6 +44,7 @@ function bandsintown (getArtist) {
         method: "GET"
       }
       $.ajax(bandOptions).then(function(response) {
+        console.log("bands");
         console.log(response);
         // response is an array
         // I have to loop through array to get info I want
@@ -50,20 +53,20 @@ function bandsintown (getArtist) {
           console.log(response[i].venue.name);
           console.log(response[i].venue.city);
           console.log(response[i].venue.country);
+          eventsHeader.innerHTML = " <strong></strong>"
         }
 
       })
      var artistEl = document.getElementById("artist");
-      console.log(artistEl);
       
   }
-var Angel = {
-  name: "Angel",
-  cohort: "Web Development",
-  grad_date:{
-    month: "May",
-    day: "1",
-    year: "2020"
-  }
-}
-console.log(Angel.grad_date.day);
+// var Angel = {
+//   name: "Angel",
+//   cohort: "Web Development",
+//   grad_date:{
+//     month: "May",
+//     day: "1",
+//     year: "2020"
+//   }
+// }
+// console.log(Angel.grad_date.day);
