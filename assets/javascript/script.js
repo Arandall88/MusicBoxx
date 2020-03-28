@@ -30,6 +30,11 @@ function genius (getArtist) {
   $.ajax(options).then(function(response) {
     console.log("genius");
     console.log(response);
+    if ( response.response.hits.length > 0) {
+      var headerImage = response.response.hits[0].result.primary_artist.header_image_url;
+      var artist = $("<img>").attr("src", headerImage);
+      $("#artists").append(artist);
+    } 
 })
 
 
