@@ -29,11 +29,13 @@ function genius (getArtist) {
 
   $.ajax(options).then(function(response) {
     console.log("genius");
-    console.log(response);
+    console.log(response.response.hits[0]);
     if ( response.response.hits.length > 0) {
       var headerImage = response.response.hits[0].result.primary_artist.header_image_url;
       var artist = $("<img>").attr("src", headerImage);
-      $("#artists").append(artist);
+      var lyricsUrl = response.response.hits[0].result.url;
+      var lyrics = $("<a>").attr("href", lyricsUrl).text("lyrics");
+      $("#artists").append(artist, lyrics);
     } 
 })
 
