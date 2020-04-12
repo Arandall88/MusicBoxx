@@ -5,3 +5,15 @@
   #loggedin {
     display: none;
   }
+
+  body{
+    background-color: beige;
+  }
+
+  .hero{
+    background-color: orange;
+  }
+
+  .navbar{
+    background-color:bisque ;
+  }
