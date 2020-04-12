@@ -1,6 +1,5 @@
-# MusicBoxx
-App where you can learn cool facts about your favorite artist and also find out where they are playing next!. 
-
+## MusicBoxx
+# Your own personal Music Boxx! Users can search for any artist or song. Find out where they are playing next, and even listen to your favorite song!
 ![Music-Boxx](https://user-images.githubusercontent.com/59499644/79080784-7e7d9f00-7cdd-11ea-9370-836b1e19a530.jpg)
 
 
