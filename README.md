@@ -1,6 +1,5 @@
 ## MusicBoxx <br>
 # Your own personal Music Boxx!<br>
-<strong>Add unlimited number of artists to Music Boxx unless page is refreshed which empties Music Boxx.</strong>
 <ul>
   <li> Search for any artist or song to listen to</li>
   <li> Learn the lyrics to any song</li>
