@@ -1,4 +1,9 @@
- genius
+ ## User Story: <br>
+As a User 
+I want to be able to search for any song or artist <br>
+and find out where they are playing next, <br>
+as well as search for and listen to any song. <br>
+
 # MusicBoxx
 App where you can listen to your favorite artist for free while getting cool facts and information about that artist. 
 
@@ -17,11 +22,4 @@ https://arandall88.github.io/MusicBoxx/
   <li>Find out what events any artist has coming up</li>
 </ul>
 
-
-=======
-## User Story: <br>
-As a User 
-I want to be able to search for any song or artist <br>
-and find out where they are playing next, <br>
-as well as search for and listen to any song. <br>
 
