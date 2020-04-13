@@ -17,3 +17,11 @@ https://arandall88.github.io/MusicBoxx/
   <li>Find out what events any artist has coming up</li>
 </ul>
 
+
+=======
+## User Story: <br>
+As a User 
+I want to be able to search for any song or artist <br>
+and find out where they are playing next, <br>
+as well as search for and listen to any song. <br>
+
