@@ -10,7 +10,7 @@ https://arandall88.github.io/MusicBoxx/
   <li> Learn the lyrics to any song</li>
   <li>Find out what events any artist has coming up</li>
 </ul>
-## User Story:
+## User Story: <br>
 As a User 
 I want to be able to search for any song or artist <br>
 and find out where they are playing next, <br>
