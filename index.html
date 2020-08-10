@@ -1,140 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MusicBoxx!</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-    ></script>
-  </head>
-  <body>
- 
-    
-       
-    
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MusicBoxx!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">MusicBoxx</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Favorites</a>
+          <a class="nav-item nav-link" href="#">Upcoming</a>
+        </div>
       </div>
-    
-    
-    
-       
-       
-      </div>
+      <div>
+        <div class="control is-pulled-left">
+          <input id="searchbar" class="input" type="text" placeholder="Search for an artist" />
+          <button id="buttonz" type="button" class="btn btn-primary">Search</button>
+        </div>
     </nav>
-    
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <img src="assets/images/3c4f816c-5a2f-43df-bf25-67831996dbc4_200x200 (1).png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-        </div>
-      </div>
-    </section>
+  </div>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
 
+      <h1 class="display-4">Whats in your Boxx?</h1>
+      <img >
+    </div>
+  </div>
+  <div>
+    <container class="music">
+      <row>
+        <columns>
+
+          <h1>
+            Yooo
+
+          </h1>
         
+        </columns>
+      </row>
+    </container>
+  </div>
 
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Welcome to MusicBoxx!
-        </h1>
-        <h2> <bold>Your own personal Music Boxx! Users can search for any artist or song to listen to. Learn the lyrics to any song , and find out what events they have coming up! </bold></h2>
-        <div class="field has-addons"></div>
-        <p class="subtitle">
-          <strong> Whats in your Boxx!</strong>
-        </p>
-        <div>
-          <div class="control is-pulled-left">
-            <input
-              id="myInput"
-              class="input"
-              type="text"
-              placeholder="Search for an artist"
-            />
-          </div>
-          <div class="control">
-            <a id="artist" class="button is-info ">
-              Search
-            </a>
-            <strong>Enter Any Artist Or Song</strong> <br>
-          </div>
-        </div>
-        
-                    <!-- <p>
-                      <strong>Past Searches</strong>
-                      <br>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean efficitur sit amet massa fringilla egestas.<br> Nullam condimentum luctus turpis.
-                    </p> -->
-                  </div>
-                  
-            </div>
-            </row>
 
-          </div> <br>
 
-          <div class="column">
-            <div class="">
-              <div class="box is-pulled-right">
-                <div class="media-content">
-                  <div class="content">
-                    <p id="events-header"><strong>Find out where They're at!</strong></p>
-                    <p>
-                      <strong><em>Playing next!</em></strong>
-                      <div id="events"></div>
-                        
-                    </p>
-                  </div>
-                  
-            </div>
-          </div>
-          </div> 
-          <div class="column">
-           <div>
-            <div class="box is-pulled-right">
-              <div class="media-content">
-                <div class="content">
-                  <p><strong>Click the Lyrics link to Listen to music by this Artist!</strong></p> 
-                  <div id="artists"></div>
-                  <p>
-                    <!-- <strong>Past Searches</strong> -->
-                    <br>
-                    
-                  </p>
-                </div>
-                
-          </div>
-           </row>
 
-          </div> <br>
-        </div>
-        <!-- <div class="box is-pulled-left">
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Past Searches</strong>
-                  <br>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean efficitur sit amet massa fringilla egestas.<br> Nullam condimentum luctus turpis.
-                </p>
-              </div>
-              
-        </div>
-        -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/javascript/script.js"></script>
-  </body>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./assets/javascript/script.js"></script>
+</body>
+
 </html>
 <link rel="stylesheet" href="./assets/css/style.css">
