@@ -1,83 +1,59 @@
-// use JS to set input to a variable
-// d1243d59a55aac63620cde2da9cb8533 Bands in town app id 
-function searchFunction() {
-  input = document.getElementById("myInput");
-  input.value
-}
-var eventsHeader = document.getElementById("events-header");
-  eventsHeader.innerHTML = " <strong>Hey!</strong>"
-// grab input value
-// when you click submit that input value should be what is searched
-// ================STRETCH GOAL
-// show input value on HTML PAGE
-$("#artist").click(function(){
-  var str = $("#myInput").val();
-  bandsintown(str);
-  genius(str);
-  console.log(str);
-  console.log("click");
-});
+import Genius from "genius-api";
 
-function genius (getArtist) {
-  var api_url =
-      "https://api.genius.com/search?access_token=6stGl_AhiQF-yaqXNIYYERqz147RjWWIxPU01IuBDbpoEpryb_ECXzWhfypCwDLr",
-    options = {
-      url: api_url + "&q=" + getArtist,
-      method: "GET"
-    
-    };
+const accessToken =
+  "reAx8fk5uxatjo5EAcKwZEGqBNsIyZGsXVe7Lha25lGz1B05YrSBvLfWdxlAjzxC";
+const genius = new Genius(accessToken);
 
-  $.ajax(options).then(function(response) {
-    console.log("genius");
-    console.log(response.response.hits[0]);
-    if ( response.response.hits.length > 0) {
-      var headerImage = response.response.hits[0].result.primary_artist.header_image_url;
-      var artist = $("<img>").attr("src", headerImage);
-      var lyricsUrl = response.response.hits[0].result.url;
-      var lyrics = $("<a>").attr("href", lyricsUrl).text("lyrics");
-      $("#artists").append(artist, lyrics);
-    } 
-})
+// genius API does not have an artist entrypoint.
+// Instead, search for the artist => get a song by that artist => get API info on that song => get artist id
+Genius.prototype.getArtistIdByName = function getArtistIdByName(artistName) {
+  const normalizeName = name => name.replace(/\./g, '').toLowerCase()   // regex removes dots
+  const artistNameNormalized = normalizeName(artistName)
 
-
-}
-
-function bandsintown (getArtist) {
-
-  var queryURL =
-    "https://rest.bandsintown.com/artists/" + getArtist + "/events?app_id=d1243d59a55aac63620cde2da9cb8533";
-      bandOptions = {
-        url:queryURL,
-        method: "GET"
-      }
-      $.ajax(bandOptions).then(function(response) {
-        console.log("bands");
-        console.log(response);
-        // response is an array
-        // I have to loop through array to get info I want
-        for ( var i = 0; i < response.length; i++) {
-        // i want venue information from response
-        var name = $("<h3>").text(response[i].venue.name)
-        var city = $("<p>").text(response[i].venue.city)
-        var country = $("<p>").text(response[i].venue.country)
-        $("#events").append(name, city, country);
-          console.log(response[i].venue.name);
-          console.log(response[i].venue.city);
-          console.log(response[i].venue.country);
-          eventsHeader.innerHTML = " <strong></strong>"
+  return this.search(artistName)
+    .then((response) => {
+      for (let i = 0; i < response.hits.length; i += 1) {
+        const hit = response.hits[i]
+        if (hit.type === 'song' && normalizeName(hit.result.primary_artist.name) === artistNameNormalized) {
+          return hit.result
         }
+      }
+      throw new Error(`Did not find any songs whose artist is "${artistNameNormalized}".`)
+    })
+    .then(songInfo => songInfo.primary_artist.id)
+}
 
-      })
-     var artistEl = document.getElementById("artist");
-      
-  }
-// var Angel = {
-//   name: "Angel",
-//   cohort: "Web Development",
-//   grad_date:{
-//     month: "May",
-//     day: "1",
-//     year: "2020"
-//   }
-// }
-// console.log(Angel.grad_date.day);
+const genius = new Genius(accessToken)
+genius.getArtistIdByName('Drake')
+.then(artistId => { /* ... */ })
+.catch(err => console.error(err))
+
+genius.songsByArtist(artistId, {
+    per_page: 50,
+    sort: 'popularity',
+})
+.then(songs => songs.map(song => song.url)) // has more song info like 'id', 'title', ...
+
+Genius.prototype.getSongLyrics = function getSongLyrics(geniusUrl) {
+  return fetch(geniusUrl, {
+    method: "GET",
+  })
+    .then((response) => {
+      if (response.ok) return response.text();
+      throw new Error("Could not get song url ...");
+    })
+    .then(parseSongHTML);
+};
+
+// parse.js
+import cheerio from "cheerio";
+
+function parseSongHTML(htmlText) {
+  const $ = cheerio.load(htmlText);
+  const lyrics = $(".lyrics").text();
+  const releaseDate = $("release-date .song_info-info").text();
+  return {
+    lyrics,
+    releaseDate,
+  };
+}
