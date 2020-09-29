@@ -54,7 +54,11 @@
 }
 
 .card {
-  justify-content: center;
+  background-color: rgb(28, 28, 170);
+  border: blue;
+  margin: auto;
+  top: 7rem;
+  height: 200px;
 }
 @-webkit-keyframes glow {
   from {
