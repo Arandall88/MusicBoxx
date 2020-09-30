@@ -141,7 +141,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Email : drivenbysucess21@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://arandall88.github.io/MusicBoxx/](https://github.com/Arandall88/musicboxx)
 
 
 
