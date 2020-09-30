@@ -37,9 +37,8 @@
   <h3 align="center">MusicBoxx</h3>
 
   <p align="center">
-    # MusicBoxx is a user friendly music app. It allows users to learn about their favorite artists, as well as find out where they might be playing next closest to said user. The user can then add these events to a vibe list where they can save the info to remind them of the fun they had or that they are interested in going.
+     MusicBoxx is a user friendly music app. It allows users to learn about their favorite artists, as well as find out where they might be playing next closest to said user. The user can then add these events to a vibe list where they can save the info to remind them of the fun they had or that they are interested in going.
 
-    <br />
 </p>
 
 
@@ -144,7 +143,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+## Email : drivenbysucess21@gmail.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
