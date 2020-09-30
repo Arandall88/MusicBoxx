@@ -40,15 +40,6 @@
     # MusicBoxx is a user friendly music app. It allows users to learn about their favorite artists, as well as find out where they might be playing next closest to said user. The user can then add these events to a vibe list where they can save the info to remind them of the fun they had or that they are interested in going.
 
     <br />
-    <a href="https://github.com/Arandall88/musicboxx"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Arandall88/musicboxx">View Demo</a>
-    ·
-    <a href="https://github.com/Arandall88/repo_name/musicboxx">Report Bug</a>
-    ·
-    <a href="https://github.com/Arandall88/repo_name/musicboxx">Request Feature</a>
-  </p>
 </p>
 
 
