@@ -153,20 +153,3 @@ Project Link: [https://arandall88.github.io/MusicBoxx/](https://github.com/Arand
 * []()
 * []()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# This app is powered by the GENIUS API as well as the Bandsintown API
-
-# This app implemented Nodejs https://nodejs.org/en/about/
