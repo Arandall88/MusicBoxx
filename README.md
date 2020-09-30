@@ -43,11 +43,11 @@
     <a href="https://github.com/Arandall88/musicboxx"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Arandall88/musicboxx">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Arandall88/repo_name/musicboxx">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Arandall88/repo_name/musicboxx">Request Feature</a>
   </p>
 </p>
 
