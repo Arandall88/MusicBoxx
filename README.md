@@ -91,7 +91,7 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo_name.git
+git clone https://github.com/Arandall88/musicboxx.git
 ```
 2. Install NPM packages
 ```sh
