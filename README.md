@@ -69,8 +69,8 @@
 ### Built With
 
 * [Bandsintown API](https://www.bandsintown.com/)
-* []()
-* []()
+* [Node.js](https://nodejs.org/en/)
+* [Genius API](https://genius.com/)
 
 
 
